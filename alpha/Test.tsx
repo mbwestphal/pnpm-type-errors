@@ -2,10 +2,6 @@ import {DateTimePicker} from '@mui/x-date-pickers-pro';
 import type {FC} from 'react';
 import React from 'react';
 
-type TestProps = {
-	size?: 'an-illegal-string';
-};
-
-const Test: FC<TestProps> = (props) => <DateTimePicker slotProps={{textField: {size: props.size}}} />;
+const Test: FC = () => <DateTimePicker slotProps={{textField: {size: 'an-illegal-string'}}} onEverythingBroken={() => NaN}/>;
 
 export default Test;
